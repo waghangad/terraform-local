@@ -32,3 +32,12 @@ resource "aws_subnet" "example-subnet" {
 	Name = "pri-sbnt-1a"
   }
 }
+
+# Create public subnet
+resource "aws_subnet" "public-subnet" {
+  vpc_id = aws_vpc.example.id
+  cidr_block = "10.10.2.0/24"
+  tags = {
+    Name = "pub-sbnt-1a"
+  }
+}
