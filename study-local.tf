@@ -41,3 +41,7 @@ resource "aws_subnet" "public-subnet" {
     Name = "pub-sbnt-1a"
   }
 }
+
+output "vpc_id" {
+  value = "${aws_vpc.example.id}"
+}
